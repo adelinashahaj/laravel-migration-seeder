@@ -5,17 +5,18 @@
 
 @section('content')
 
+
    @foreach ($trains as $train)
 <div class="col-3">
     <div class="card m-3">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Orario di partenza: {{ $train->orario_di_partenza }}<br/>
-                Stazione di partenza: {{$train['stazione_di_partenza']}}<br/>
-                Stazione di arrivo: {{$train['stazione_di_arrivo']}}<br/>
-                Codice Treno:  {{$train['codice_treno']}}<br/>
-                Numero Carrozze:  {{$train['numero_carrozze']}}<br/>
-                In orario:  {{$train['in_orario']}}<br/>
-                Cancellato: {{$train['cancellato']}}<br/>
+            <li class="list-group-item">Orario di partenza: {{ $train->departure_time }}<br/>
+                Stazione di partenza: {{$train->arrival_station}}<br/>
+                Stazione di arrivo: {{$train->stazione_di_arrivo}}<br/>
+                Codice Treno:  {{$train->train_code}}<br/>
+                Numero Carrozze:  {{$train->wagons_number}}<br/>
+                In orario:  {{$train->on_time}}<br/>
+                Cancellato: {{$train->cancelled}}<br/>
             </li>
         </ul>
     </div>
